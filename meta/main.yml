@@ -1,4 +1,5 @@
 galaxy_info:
+  role_name: install_packages
   author: Camaeel
   description: Generic package installer for ubuntu
   # company: your company (optional)
