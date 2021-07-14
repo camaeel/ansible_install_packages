@@ -11,6 +11,7 @@ add_packages_list - list of package names to isntall
 remove_packages_list - list of package names to remove from system
 sources_keys - list of apt keys to add (for custom apt repositories)
 sources_repos - list of source repos entries (for custom apt repositories)
+unattended_upgrades_all - Configure unattended upgrades
 
 Dependencies
 ------------
@@ -33,6 +34,7 @@ Including an example of how to use your role (for instance, with variables passe
         - AJDSGFJSGDFJ765654
         sources_repos:
         - deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable     
+        unattended_upgrades_all: True
 
 License
 -------
