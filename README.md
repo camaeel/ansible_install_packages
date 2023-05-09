@@ -34,6 +34,8 @@ Including an example of how to use your role (for instance, with variables passe
         - AJDSGFJSGDFJ765654
         sources_repos:
         - deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable     
+        remove_sources_repos:
+        - deb [arch=amd64] https://download.docker.com/linux/ubuntu DEPRECATED stable    
         unattended_upgrades_all: True
 
 License
