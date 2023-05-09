@@ -14,11 +14,19 @@
   when: sources_repos is defined
   register: add_source_repos
 
+- name: "Remove source repositories"
+  apt_repository:
+    repo: "{{item}}"
+    state: absent
+  with_items: "{{ remove_sources_repos }}"
+  when: remove_sources_repos is defined
+  register: remove_source_repos
+
 - name: "update packages (if repos added)"
   apt:
     update_cache: yes
     cache_valid_time: 3600    
-  when: add_source_repos.changed == true
+  when: add_source_repos.changed == true or remove_source_repos.changed == true
   tags:
   - update
 
