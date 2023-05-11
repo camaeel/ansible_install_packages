@@ -1,3 +1,8 @@
+## DEPRECATED
+
+Please switch to collection camaeel.general.install_packages
+
+
 Install packages
 =========
 
